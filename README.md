@@ -1,20 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EMI Calculator 2.0
+
+A responsive EMI calculator with amortization schedule and contact form integration.
+
+## Features
+- Responsive design for mobile, tablet, and desktop
+- Real-time EMI calculations
+- Interactive charts and visualizations
+- Contact form integration
+- Amortization schedule generation
+- PDF export functionality
+- Security optimizations
+
+## Tech Stack
+- Next.js 16
+- React with TypeScript
+- Tailwind CSS
+- Framer Motion for animations
+- Recharts for data visualization
+- React Three Fiber for 3D elements
+- jsPDF for PDF generation
+
+## Deployment
+This project is ready for deployment on Vercel.
 
 ## Getting Started
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run development server: `npm run dev`
+4. Build for production: `npm run build`
 
-First, run the development server:
+## Live Demo
+Deployed on Vercel for testing and demonstration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Repository: https://github.com/waseemahmed41/emi_2.0
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
