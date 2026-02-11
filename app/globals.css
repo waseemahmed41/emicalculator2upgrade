@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Modern Slider Styles */
+.slider-modern::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.slider-modern::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  z-index: 10;
+}
+
+.slider-modern::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.slider-modern::-moz-range-thumb:hover {
+  transform: scale(1.1);
+}
+
+.slider-modern::-webkit-slider-thumb:active {
+  transform: scale(0.95);
+}
+
+.slider-modern::-moz-range-thumb:active {
+  transform: scale(0.95);
+}
+
+/* Custom select arrow styling */
+select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* Date input styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Smooth transitions for all interactive elements */
+input, select, button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slider optimizations for smooth performance */
+.slider-modern {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  outline: none;
+  transition: opacity 0.2s;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.slider-modern::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.slider-modern::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+/* Mobile-specific responsive improvements */
+@media (max-width: 640px) {
+  /* Improve touch targets for mobile */
+  input, select, button {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  /* Reduce slider container size on mobile */
+  .slider-container {
+    width: 80% !important; /* Reduced container width */
+    max-width: 180px !important; /* Smaller max width */
+    margin: 0 auto !important; /* Center the container */
+  }
+  
+  /* Reduce slider width on mobile */
+  .slider-modern {
+    touch-action: pan-y;
+    width: 100% !important; /* Full width within container */
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Improve readability on mobile */
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  /* Better spacing for mobile forms */
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive container padding */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Tablet improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Optimize for tablet touch */
+  input, select, button {
+    min-height: 48px;
+  }
+  
+  /* Better chart sizing on tablets */
+  .recharts-wrapper {
+    font-size: 0.875rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Crisper text on high DPI displays */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
