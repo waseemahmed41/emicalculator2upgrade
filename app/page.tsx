@@ -295,7 +295,7 @@ export default function EMICalculator() {
         
         cellData.forEach((text, i) => {
           const td = document.createElement('td');
-          td.textContent = text;
+          td.textContent = String(text);
           td.style.border = '1px solid #ddd';
           td.style.padding = '8px';
           td.style.textAlign = i === 0 || i === 1 ? 'left' : 'right';
