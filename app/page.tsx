@@ -490,17 +490,11 @@ export default function EMICalculator() {
                     step="1000"
                     value={loanAmount}
                     onChange={handleLoanAmountChange}
-                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer slider-modern"
+                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer slider-modern loan-slider"
                     style={{
                       background: `linear-gradient(to right, #8b5cf6 0%, #8b5cf6 ${(loanAmount - 10000) / (10000000 - 10000) * 100}%, rgba(255,255,255,0.1) ${(loanAmount - 10000) / (10000000 - 10000) * 100}%, rgba(255,255,255,0.1) 100%)`
                     }}
                   />
-                  <div 
-                    className="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full shadow-lg shadow-blue-500/25 transition-all duration-300 pointer-events-none"
-                    style={{ left: `calc(${((loanAmount - 10000) / (10000000 - 10000)) * 100}% - 12px)` }}
-                  >
-                    <div className="absolute inset-1 bg-white/30 rounded-full"></div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -524,17 +518,11 @@ export default function EMICalculator() {
                     step="0.1"
                     value={interestRate}
                     onChange={handleInterestRateChange}
-                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer slider-modern"
+                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer slider-modern interest-slider"
                     style={{
                       background: `linear-gradient(to right, #f97316 0%, #f97316 ${((interestRate - 1) / (20 - 1)) * 100}%, rgba(255,255,255,0.1) ${((interestRate - 1) / (20 - 1)) * 100}%, rgba(255,255,255,0.1) 100%)`
                     }}
                   />
-                  <div 
-                    className="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full shadow-lg shadow-orange-500/25 transition-all duration-300 pointer-events-none"
-                    style={{ left: `calc(${((interestRate - 1) / (20 - 1)) * 100}% - 12px)` }}
-                  >
-                    <div className="absolute inset-1 bg-white/30 rounded-full"></div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -556,17 +544,11 @@ export default function EMICalculator() {
                     max="30"
                     value={tenure}
                     onChange={handleTenureChange}
-                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer slider-modern"
+                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer slider-modern tenure-slider"
                     style={{
                       background: `linear-gradient(to right, #10b981 0%, #10b981 ${((tenure - 1) / (30 - 1)) * 100}%, rgba(255,255,255,0.1) ${((tenure - 1) / (30 - 1)) * 100}%, rgba(255,255,255,0.1) 100%)`
                     }}
                   />
-                  <div 
-                    className="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-r from-green-400 to-green-600 rounded-full shadow-lg shadow-green-500/25 transition-all duration-300 pointer-events-none"
-                    style={{ left: `calc(${((tenure - 1) / (30 - 1)) * 100}% - 12px)` }}
-                  >
-                    <div className="absolute inset-1 bg-white/30 rounded-full"></div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -590,17 +572,11 @@ export default function EMICalculator() {
                     max="60"
                     value={additionalMonths}
                     onChange={handleAdditionalMonthsChange}
-                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer slider-modern"
+                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer slider-modern months-slider"
                     style={{
                       background: `linear-gradient(to right, #8b5cf6 0%, #8b5cf6 ${(additionalMonths / 60) * 100}%, rgba(255,255,255,0.1) ${(additionalMonths / 60) * 100}%, rgba(255,255,255,0.1) 100%)`
                     }}
                   />
-                  <div 
-                    className="absolute top-1/2 -translate-y-1/2 w-6 h-6 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full shadow-lg shadow-purple-500/25 transition-all duration-300 pointer-events-none"
-                    style={{ left: `calc(${(additionalMonths / 60) * 100}% - 12px)` }}
-                  >
-                    <div className="absolute inset-1 bg-white/30 rounded-full"></div>
-                  </div>
                 </div>
               </div>
             </div>

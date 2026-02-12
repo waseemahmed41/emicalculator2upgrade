@@ -99,7 +99,8 @@ input, select, button {
   transform: translateZ(0); /* Hardware acceleration */
 }
 
-.slider-modern::-webkit-slider-thumb {
+/* Loan Amount Slider - Blue/Purple */
+.slider-modern.loan-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 24px;
@@ -112,11 +113,89 @@ input, select, button {
   transform: translateZ(0); /* Hardware acceleration */
 }
 
-.slider-modern::-moz-range-thumb {
+.slider-modern.loan-slider::-moz-range-thumb {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+/* Interest Rate Slider - Orange */
+.slider-modern.interest-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f97316, #fb923c);
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.slider-modern.interest-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f97316, #fb923c);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+/* Tenure Slider - Green */
+.slider-modern.tenure-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #10b981, #34d399);
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.slider-modern.tenure-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #10b981, #34d399);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+/* Additional Months Slider - Purple */
+.slider-modern.months-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #8b5cf6, #a78bfa);
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.slider-modern.months-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #8b5cf6, #a78bfa);
   cursor: pointer;
   border: none;
   transition: transform 0.1s ease-out;
